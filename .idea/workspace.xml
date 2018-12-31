@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4fcd0142-5cbb-4ce5-8f9d-8118e7621baa" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/navbar/MenuBar.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App.js" afterPath="$PROJECT_DIR$/src/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.css" afterPath="$PROJECT_DIR$/src/index.css" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="249" column="19" lean-forward="true" selection-start-line="249" selection-start-column="19" selection-end-line="249" selection-end-column="19" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>profile</find>
+      <find>My Profile</find>
+      <find>inputRoot</find>
+      <find>label</find>
+      <find>typo</find>
+      <find>listItem</find>
+      <find>title</find>
+      <find>handleToggle</find>
+      <find>CloseIcon</find>
+      <find>open</find>
+      <find>root</find>
+      <find>DialogTitle</find>
+      <find>volume</find>
+      <find>import React\, \{ Component \} from \'react\'\;\nimport \'\.\/App\.css\'\;\nimport \{ withStyles \} from \'\@material\-ui\/core\/styles\'\;\nimport PropTypes from \'prop\-types\'\;\nimport Paper from \'\@material\-ui\/core\/Paper\'\;\nimport InputBase from \'\@material\-ui\/core\/InputBase\'\;\nimport IconButton from \'\@material\-ui\/core\/IconButton\'\;\nimport SearchIcon from \'\@material\-ui\/icons\/Search\'\;\nimport MenuBar from \'\.\/navbar\/MenuBar\'\nimport List from \'\@material\-ui\/core\/List\'\;\nimport ListItem from \'\@material\-ui\/core\/ListItem\'\;\nimport ListItemSecondaryAction from \'\@material\-ui\/core\/ListItemSecondaryAction\'\;\nimport ListItemText from \'\@material\-ui\/core\/ListItemText\'\;\nimport Checkbox from \'\@material\-ui\/core\/Checkbox\'\;\nimport CommentIcon from \'\@material\-ui\/icons\/Comment\'\;\nimport Tooltip from \'\@material\-ui\/core\/Tooltip\'\;\nimport Dialog from \'\@material\-ui\/core\/Dialog\'\;\nimport DialogTitle from \'\@material\-ui\/core\/DialogTitle\'\;\nconst styles \= theme \=\&gt;\(\{\n    root\: \{\n        marginTop\: \'16px\'\,\n        marginLeft\: \'auto\'\,\n        marginRight\: \'auto\'\,\n        padding\: \'2px 4px\'\,\n        display\: \'flex\'\,\n        alignItems\: \'center\'\,\n        width\:80\+\'\%\'\,\n    \}\,\n    input\: \{\n        marginLeft\: 8\,\n        flex\: 1\,\n        \'\&amp;\:focus\'\: \{\n            width\: \'blue\'\,\n        \}\,\n    \}\,\n    iconButton\: \{\n        padding\: 10\,\n    \}\,\n    divider\: \{\n        width\: 1\,\n        height\: 28\,\n        margin\: 4\,\n    \}\,\n    list\: \{\n        marginTop\: \'16px\'\,\n        marginLeft\: \'auto\'\,\n        marginRight\: \'auto\'\,\n        width\: \'100\%\'\,\n        maxWidth\: \'80\%\'\,\n        backgroundColor\: theme\.palette\.background\.paper\,\n    \}\,\n    listItem\: \{\n        borderBottom\:\'1px solid lightgray\'\,\n    \}\,\n    title\: \{\n        display\: \'none\'\,\n        width\:100\+\'px\'\,\n        \[theme\.breakpoints\.up\(\'sm\'\)\]\: \{\n            display\: \'block\'\,\n        \}\,\n    \}\,\n\}\)\;\n\nclass App extends Component \{\n    constructor\(props\) \{\n        super\(props\)\;\n    \}\n    state \= \{\n        checked\: \[0\]\,\n        open\: false\,\n    \}\;\n\n    handleToggle \= value \=\&gt; \(\) \=\&gt; \{\n        const \{ checked \} \= this\.state\;\n        const currentIndex \= checked\.indexOf\(value\)\;\n        const newChecked \= \[\.\.\.checked\]\;\n\n        if \(currentIndex \=\=\= \-1\) \{\n            newChecked\.push\(value\)\;\n        \} else \{\n            newChecked\.splice\(currentIndex\, 1\)\;\n        \}\n\n        this\.setState\(\{\n            checked\: newChecked\,\n            open\: true\,\n        \}\)\;\n    \}\;\n\n    handleClose \= \(\) \=\&gt; \{\n        this\.setState\(\{ open\: false \}\)\;\n    \}\;\n\n    render\(\) \{\n        return \(\n            \&lt;div className\=\&quot;\&quot;\&gt;\n                \&lt;div\&gt;\n                    \&lt;MenuBar\&gt;\&lt;\/MenuBar\&gt;\n                \&lt;\/div\&gt;\n                \&lt;Paper className\=\{classes\.root\} elevation\=\{1\}\&gt;\n                    \&lt;InputBase className\=\{classes\.input\} placeholder\=\&quot;Search Stock by symbol\, Please click search button\.\&quot; fullWidth\/\&gt;\n                    \&lt;IconButton className\=\{classes\.iconButton\} aria\-label\=\&quot;Search\&quot;\&gt;\n                        \&lt;SearchIcon \/\&gt;\n                    \&lt;\/IconButton\&gt;\n                \&lt;\/Paper\&gt;\n                \&lt;div\&gt;\n                    \&lt;List className\=\{classes\.list\}\&gt;\n                        \{\[0\, 1\, 2\, 3\, 4\, 5\,6\,7\,8\,9\,10\]\.map\(value \=\&gt; \(\n                            \&lt;ListItem key\=\{value\} role\=\{undefined\} dense button onClick\=\{this\.handleToggle\(value\)\} className\=\{classes\.listItem\}\&gt;\n                                \&lt;Checkbox\n                                    tabIndex\=\{\-1\}\n                                    disableRipple\n                                    color\=\&quot;primary\&quot;\n                                \/\&gt;\n                                \&lt;ListItemText secondary\=\{\`July 20\, 2014\`\} \/\&gt;\n                                \&lt;ListItemText primary\=\{\`WLTW \$\{value \+ 1\}\`\} \/\&gt;\n                                \&lt;ListItemText secondary\=\{\`123\.43\`\} \/\&gt;\n                                \&lt;ListItemText secondary\=\{\`125\.839996\`\} \/\&gt;\n                                \&lt;ListItemText secondary\=\{\`122\.309998\`\} \/\&gt;\n                                \&lt;ListItemText secondary\=\{\`126\.25\`\} \/\&gt;\n                                \&lt;ListItemText primary \=\{\`2163600\`\} \/\&gt;\n                                \&lt;ListItemSecondaryAction\&gt;\n                                    \&lt;Tooltip title\=\&quot;Show History\&quot;\&gt;\n                                        \&lt;IconButton aria\-label\=\&quot;Comments\&quot;\&gt;\n                                            \&lt;CommentIcon \/\&gt;\n                                        \&lt;\/IconButton\&gt;\n                                    \&lt;\/Tooltip\&gt;\n                                \&lt;\/ListItemSecondaryAction\&gt;\n                            \&lt;\/ListItem\&gt;\n                        \)\)\}\n                    \&lt;\/List\&gt;\n                    \&lt;Dialog onClose\=\{this\.handleClose\} aria\-labelledby\=\&quot;simple\-dialog\-title\&quot;\&gt;\n                        \&lt;DialogTitle id\=\&quot;simple\-dialog\-title\&quot;\&gt;Set backup account\&lt;\/DialogTitle\&gt;\n                        \&lt;div\&gt;\n                        \&lt;\/div\&gt;\n                    \&lt;\/Dialog\&gt;\n                \&lt;\/div\&gt;\n            \&lt;\/div\&gt;\n        \)\;\n        const\{classes\} \= this\.props\;\n  \}\n\}\n\nApp\.propTypes \= \{\n    classes\: PropTypes\.object\.isRequired\,\n\}\;\n\nexport default withStyles\(styles\)\(App\)\;\n</find>
+      <find>history</find>
+      <find>typ</find>
+      <find>state</find>
+      <find>props</find>
+      <find>visibility</find>
+      <find>Typography</find>
+      <find>Description</find>
+      <find>shown</find>
+      <find>largeIcon</find>
+      <find>handleClose</find>
+      <find>chartDialog</find>
+      <find>data</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/App.css" />
+        <option value="$PROJECT_DIR$/src/navbar/MenuBar.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/App.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1038" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="stack-archives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stack-archives" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="stack-archives" type="b2602c69:ProjectViewProjectNode" />
+              <item name="stack-archives" type="462c0819:PsiDirectoryNode" />
+              <item name="node_modules" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="G:\Events\BrainWaves2019\stack-archives\node_modules\eslint" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\Events\BrainWaves2019\stack-archives\src\navbar" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4fcd0142-5cbb-4ce5-8f9d-8118e7621baa" name="Default" comment="" />
+      <created>1546107558887</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1546107558887</updated>
+      <workItem from="1546107564799" duration="1834000" />
+      <workItem from="1546146435072" duration="25543000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="27377000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32982457" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/logo.svg">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="34" lean-forward="true" selection-start-line="5" selection-start-column="34" selection-end-line="5" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" column="21" lean-forward="true" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../RakutenEvent/Project/frontend/bid-auction-system/src/navbar/MenuBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../RakutenEvent/Project/frontend/bid-auction-system/src/home/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="261">
+          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="45" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="17" lean-forward="false" selection-start-line="0" selection-start-column="17" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/navbar/MenuBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../RakutenEvent/Project/frontend/bid-auction-system/src/Login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="26" selection-end-line="84" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="21" lean-forward="false" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="249" column="19" lean-forward="true" selection-start-line="249" selection-start-column="19" selection-end-line="249" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

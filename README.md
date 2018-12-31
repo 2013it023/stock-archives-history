@@ -20,3 +20,11 @@
   5. After started the server, Please open any browser at type the above URL to see the screen’s. (Google Chrome is preferable.)
   
   6. Now the front end setup was over. now clone and do the setup for backend to retrieve a data's [https://github.com/2013it023/StackArchives.git].
+
+## Few Sample Screen Shots:
+
+![alt text](https://github.com/2013it023/stack-archives/blob/master/img/StockList.png)
+
+![alt text](https://github.com/2013it023/stack-archives/blob/master/img/StcokHistory.png)
+
+![alt text](https://github.com/2013it023/stack-archives/blob/master/img/SearchScreen.png)
